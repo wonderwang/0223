@@ -1,0 +1,56 @@
+<div class="giantpoints-send-mail-section">
+    <a name="refer_form"></a>
+
+    <form action="<?php echo $this->getUrl('giantpointsrefer/referral/sendInvitation/') ?>" method="post"
+          id="form-validates" class="form-list">
+
+        <div class="box-account box-referral">
+            <div class="box-head">
+                <h2 class="box-title"><?php echo $this->__('Send Invitations') ?></h2>
+            </div>
+            <div class="input-box">
+                <div class="send-friends-email col-mg mg-lg-6 mg-md-6 mg-sm-12 mg-xs-12">
+                    <label
+                        for="recipient_list"><?php echo $this->__('Invite your friends by entering their email addresses below') ?></label>
+                    <textarea name="contacts" id="recipient_list" class="giantpoints_recipient_list input-text"
+                              rows="3"></textarea>
+                </div>
+                <div class="send-friends-notice col-mg mg-lg-6 mg-md-6 mg-sm-12 mg-xs-12">
+                    <p class="comment">
+                        <?php echo $this->__('To reduce the chance that your message is marked as spam, please follow this format:'); ?>
+                        <br/><strong>&quot;Contact name&quot; &lt;name@example.com&gt;</strong>
+                    </p>
+
+                    <p class="comment">
+                        <?php echo $this->__('Example contact list:'); ?><br/>
+                        &quot;John&quot; &lt;john@example.com&gt;, peter@icloud.com<br/>
+                        jennifer@google.com, hello@yahoo.com, mark@gmail.com
+                    </p>
+                </div>
+            </div>
+            <br/>
+
+            <div class="input-box">
+                <div class="col-mg mg-lg-6 mg-md-6 mg-sm-12 mg-xs-12">
+                    <label
+                        for="message"><?php echo $this->__('Message (Just your message, referral links will be added automatically.)') ?> </label>
+                    <textarea name="message" id="message"
+                              class="input-text required-entry textarea giant-referral-message"
+                              rows="4"
+                              cols="80" title="<?php echo $this->__('Short Message') ?>"></textarea>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="btn-send col-mg mg-lg-6 mg-md-6 mg-sm-12 mg-xs-12">
+                <button type="submit" title="<?php echo $this->__('Send Now') ?>" class="button">
+                    <span><span><?php echo $this->__('Send Now') ?></span></span></button>
+            </div>
+
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        var dataForm = new VarienForm('form-validate', true);
+    </script>
+
+</div>

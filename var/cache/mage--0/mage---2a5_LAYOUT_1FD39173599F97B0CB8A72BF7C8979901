@@ -1,0 +1,12 @@
+<remove name="right"/>
+<remove name="left"/>
+<block type="checkout/onepage_payment_methods" name="root" output="toHtml" template="checkout/onepage/payment/methods.phtml">
+   <action method="setMethodFormTemplate">
+      <method>purchaseorder</method>
+      <template>payment/form/purchaseorder.phtml</template>
+   </action>
+</block>
+<reference name="root">
+   <block type="giantpoints/checkout_onepage_payment_spending" name="checkout.payment.spending" template="magegiant/giantpoints/checkout/onepage/payment/spending.phtml">
+            </block>
+</reference>

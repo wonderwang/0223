@@ -1,0 +1,11 @@
+
+    <div class="widget widget-static-block ">
+    	    	<div class="grid_12 alpha">
+<p class="h5">付款方式</p>
+<p><span class="custom-logo paymentmethods">Paypal - Visa - American Express - MasterCard - Skrill</span></p>
+</div>
+<div class="grid_12 omega">
+<p class="h5">倾听我们</p>
+<p><a title="Facebook" href="#"><span class="icon followus facebook">Facebook</span></a> <a title="Twitter" href="#"><span class="icon followus twitter">Twitter</span></a> <a title="Vimeo" href="#"><span class="icon followus vimeo">Vimeo</span></a> <a title="Feed" href="#"><span class="icon followus feed">Feed</span></a></p>
+</div>    </div>
+

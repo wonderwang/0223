@@ -1,0 +1,45 @@
+#bg_fade {background-color:#000;left:0px;margin:0px;padding:0px;position:fixed;top:0px;visibility:hidden;width:100%;z-index:998;height:1000px}
+#containerDiv {min-width: 350px;max-width:500px;z-index: 999;display:none;position:fixed;}
+#containerDiv .ajaxcart {position: relative;padding: 20px;text-align: center;border: 10px solid #EAE9E6;background-color: white;z-index: 99999; max-height:600px}
+#containerDiv .ajaxcart .row2 {clear:left; padding-bottom:0px; overflow:hidden}
+#containerDiv .ajaxcart #ajax_image img {float:left;margin-right:7px;}
+#containerDiv .ajaxcart #ajax_image  { margin-bottom: 10px;overflow: hidden;text-align: left;}
+#containerDiv .ajaxcart #ajax_image span {text-align:left;}
+#containerDiv .ajaxcart .row2 a { /*background: none repeat scroll 0 0 #F18200;*/border: 1px solid #f34b26;color: #FFFFFF;display:  inline-block;font: bold 12px/32px Arial,Helvetica,sans-serif;height: 32px;padding: 0 15px;text-align: center;white-space: nowrap; text-decoration: none; text-transform:uppercase;
+background: #f34b26; /* Old browsers */
+background: -moz-linear-gradient(top, #f34b26 0%, #f34b26 53%, #f34b26 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f34b26), color-stop(53%,#f34b26), color-stop(100%,#f34b26)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f34b26 0%,#f34b26 53%,#f34b26 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f34b26 0%,#f34b26 53%,#f34b26 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f34b26 0%,#f34b26 53%,#f34b26 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f34b26 0%,#f34b26 53%,#f34b26 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f34b26', endColorstr='#f34b26',GradientType=0 ); /* IE6-9 */; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+#containerDiv .ajaxcart .row2 a:hover{
+background: #f34b26; /* Old browsers */
+background: -moz-linear-gradient(top, #f34b26 0%, #f34b26 0%, #f34b26 53%, #f34b26 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f34b26), color-stop(0%,#f34b26), color-stop(53%,#f34b26), color-stop(100%,#f34b26)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f34b26 0%,#f34b26 0%,#f34b26 53%,#f34b26 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f34b26 0%,#f34b26 0%,#f34b26 53%,#f34b26 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f34b26 0%,#f34b26 0%,#f34b26 53%,#f34b26 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f34b26 0%,#f34b26 0%,#f34b26 53%,#f34b26 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f34b26', endColorstr='#f34b26',GradientType=0 ); /* IE6-9 */
+}
+
+#containerDiv .ajaxcart .row2 a span { border: 0 none;padding: 0; float:left; display:inline-block}
+.product-essential {position:relative;}
+.ajaxcart .product-options{ max-height:200px; overflow:auto;}
+.ajaxcart .product_title{ text-transform:uppercase; text-align:center}
+.ajaxcart .product-shop .product-options-bottom .price-box{ float:left; margin:0;}
+.ajaxcart .product-shop .product-options-bottom{ margin-top:10px; border:1px solid #e4e4e4; padding:15px 20px 12px; width:86%;}
+#containerDiv .ajaxcart .product-options dd input.input-text{ width:95%}
+#containerDiv .ajaxcart .row2 .back{ float:left}
+#containerDiv .ajaxcart .row2 .next{ float:right}
+.ajaxcart .product-shop .product-options-bottom .price-box .price{ font-size:20px; color:#f34b26}
+.ajaxcart .product-shop .product-options-bottom .add-to-cart{ clear:left;}
+
+.ajaxcart  .add-to-cart label{ text-transform:uppercase; margin-top:11px}
+.ajaxcart .qty-ctl{ float: left; height: auto; line-height: normal; margin: 0px; padding:0 0 0 5px; width:22px; }
+.ajaxcart .qty-ctl button.increase{ background-position:0 0; margin:0 0 2px;}
+.ajaxcart .qty-ctl button.decrease{ background-position: -22px 1px;;}
+
+.ajaxcart .qty_cart{ width:158px; display:inline-block; margin-top:-11px}

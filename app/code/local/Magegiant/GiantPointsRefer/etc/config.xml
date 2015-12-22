@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magegiant
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the magegiant.com license that is
+ * available through the world-wide-web at this URL:
+ * http://magegiant.com/license-agreement/
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category    Magegiant
+ * @package     Magegiant_GiantPointsRefer
+ * @copyright   Copyright (c) 2014 Magegiant (http://magegiant.com/)
+ * @license     http://magegiant.com/license-agreement/
+ */
+-->
+<config>
+    <modules>
+        <Magegiant_GiantPointsRefer>
+            <version>0.1.0</version>
+        </Magegiant_GiantPointsRefer>
+    </modules>
+    <frontend>
+        <routers>
+            <giantpointsrefer>
+                <use>standard</use>
+                <args>
+                    <module>Magegiant_GiantPointsRefer</module>
+                    <frontName>giantpointsrefer</frontName>
+                </args>
+            </giantpointsrefer>
+        </routers>
+        <layout>
+            <updates>
+                <giantpointsrefer>
+                    <file>magegiant/giantpointsrefer.xml</file>
+                </giantpointsrefer>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Magegiant_GiantPointsRefer>
+                    <files>
+                        <default>Magegiant_GiantPointsRefer.csv</default>
+                    </files>
+                </Magegiant_GiantPointsRefer>
+            </modules>
+        </translate>
+    </frontend>
+    <admin>
+        <routers>
+            <giantpointsreferadmin>
+                <use>admin</use>
+                <args>
+                    <module>Magegiant_GiantPointsRefer</module>
+                    <frontName>giantpointsreferadmin</frontName>
+                </args>
+            </giantpointsreferadmin>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <giantpointsrefer>
+                    <file>magegiant/giantpointsrefer.xml</file>
+                </giantpointsrefer>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Magegiant_GiantPointsRefer>
+                    <files>
+                        <default>Magegiant_GiantPointsRefer.csv</default>
+                    </files>
+                </Magegiant_GiantPointsRefer>
+            </modules>
+        </translate>
+        <events>
+            <adminhtml_sales_order_creditmemo_register_before>
+                <observers>
+                    <giantpointsrefer_observers>
+                        <type>singleton</type>
+                        <class>giantpointsrefer/adminhtml_observer</class>
+                        <method>salesOrderCreditmemoRegisterBefore</method>
+                    </giantpointsrefer_observers>
+                </observers>
+            </adminhtml_sales_order_creditmemo_register_before>
+        </events>
+    </adminhtml>
+    <global>
+        <models>
+            <giantpointsrefer>
+                <class>Magegiant_GiantPointsRefer_Model</class>
+                <resourceModel>giantpointsrefer_mysql4</resourceModel>
+            </giantpointsrefer>
+            <giantpointsrefer_mysql4>
+                <class>Magegiant_GiantPointsRefer_Model_Mysql4</class>
+                <entities>
+                    <invitation>
+                        <table>giant_points_invitation</table>
+                    </invitation>
+                </entities>
+            </giantpointsrefer_mysql4>
+        </models>
+        <resources>
+            <giantpoints_refer_setup>
+                <setup>
+                    <module>Magegiant_GiantPointsRefer</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </giantpoints_refer_setup>
+            <giantpointsrefer_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </giantpointsrefer_write>
+            <giantpointsrefer_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </giantpointsrefer_read>
+        </resources>
+        <blocks>
+            <giantpointsrefer>
+                <class>Magegiant_GiantPointsRefer_Block</class>
+            </giantpointsrefer>
+        </blocks>
+        <helpers>
+            <giantpointsrefer>
+                <class>Magegiant_GiantPointsRefer_Helper</class>
+            </giantpointsrefer>
+        </helpers>
+        <template>
+            <email>
+                <giantpoints_referral_system_configuration_email_template translate="label" module="giantpoints">
+                    <label>Points and Rewards Invitation</label>
+                    <file>giantpointsrefer/invitation.html</file>
+                    <type>html</type>
+                </giantpoints_referral_system_configuration_email_template>
+            </email>
+        </template>
+        <events>
+            <controller_action_predispatch_checkout_cart_couponPost>
+                <observers>
+                    <giantpoints_coupon_post>
+                        <class>giantpointsrefer/observer</class>
+                        <method>couponPostAction</method>
+                    </giantpoints_coupon_post>
+                </observers>
+            </controller_action_predispatch_checkout_cart_couponPost>
+            <sales_order_save_after>
+                <observers>
+                    <giantpointsrefer_observers>
+                        <type>singleton</type>
+                        <class>giantpointsrefer/observer</class>
+                        <method>salesOrderSaveAfter</method>
+                    </giantpointsrefer_observers>
+                </observers>
+            </sales_order_save_after>
+            <sales_order_invoice_save_after>
+                <observers>
+                    <giantpointsrefer_observers>
+                        <type>singleton</type>
+                        <class>giantpointsrefer/observer</class>
+                        <method>salesOrderInvoiceSaveAfter</method>
+                    </giantpointsrefer_observers>
+                </observers>
+            </sales_order_invoice_save_after>
+            <sales_order_creditmemo_save_after>
+                <observers>
+                    <giantpointsrefer_observers>
+                        <type>singleton</type>
+                        <class>giantpointsrefer/observer</class>
+                        <method>salesOrderCreditmemoSaveAfter</method>
+                    </giantpointsrefer_observers>
+                </observers>
+            </sales_order_creditmemo_save_after>
+            <controller_action_postdispatch_customer_account_createpost>
+                <observers>
+                    <giantpointsrefer_postdispatch_customer_account_createpost>
+                        <class>giantpointsrefer/observer</class>
+                        <method>postdispatchCustomerAccountCreatePost</method>
+                    </giantpointsrefer_postdispatch_customer_account_createpost>
+                </observers>
+            </controller_action_postdispatch_customer_account_createpost>
+            <sociallogin_customer_register_success>
+                <observers>
+                    <customer_save_observer>
+                        <type>singleton</type>
+                        <class>giantpointsrefer/observer</class>
+                        <method>customerRegisterSuccess</method>
+                    </customer_save_observer>
+                </observers>
+            </sociallogin_customer_register_success>
+        </events>
+        <giantpoints>
+            <actions>
+                <!--Referral Earning Points-->
+                <customer_referral_signup>giantpointsrefer/actions_earning_customerReferralSignup</customer_referral_signup>
+                <invitee_invoiced>giantpointsrefer/actions_earning_inviteeInvoiced</invitee_invoiced>
+                <invitee_refunded>giantpointsrefer/actions_earning_inviteeRefunded</invitee_refunded>
+                <referral_invoiced>giantpointsrefer/actions_earning_referralInvoiced</referral_invoiced>
+                <referral_refunded>giantpointsrefer/actions_earning_referralRefunded</referral_refunded>
+                <milestone_referrals>giantpointsrefer/actions_earning_milestone_referrals</milestone_referrals>
+                <!--/Referral Earning Points-->
+            </actions>
+            <behavior>
+                <rule>
+                    <!--==========Referrals=======-->
+                    <giantpoints_behavior_rule_action_referrer_signup>
+                        <class>giantpointsrefer/rule_action_referrals_signup</class>
+                        <sort_order>1</sort_order>
+                    </giantpoints_behavior_rule_action_referrer_signup>
+                    <giantpoints_behavior_rule_action_milestone_referrals>
+                        <class>giantpointsrefer/rule_action_milestone_referrals</class>
+                        <sort_order>2</sort_order>
+                        <depends>Magegiant_GiantPointsMilestone</depends>
+                    </giantpoints_behavior_rule_action_milestone_referrals>
+                    <!--==========/Referrals=======-->
+                </rule>
+            </behavior>
+        </giantpoints>
+    </global>
+    <default>
+        <giantpoints>
+            <!--============Referral Configuration==============-->
+            <referral_system_configuration>
+                <enable>0</enable>
+                <zero_points>zero points</zero_points>
+                <info_page>reward-points</info_page>
+                <page_view>cmsindex,catalogcategory,catalogproduct</page_view>
+                <referral_discount_type>2</referral_discount_type>
+                <points_commission_percent>10</points_commission_percent>
+                <referral_conversion_rate>10,1</referral_conversion_rate>
+                <points_for_order>2</points_for_order>
+                <invited_discount_type>2</invited_discount_type>
+                <points_for_order_percent>10</points_for_order_percent>
+                <invited_conversion_rate>10,2</invited_conversion_rate>
+                <email_template>giantpoints_referral_system_configuration_email_template</email_template>
+            </referral_system_configuration>
+
+            <!--===========End Referral=============-->
+            <milestone>
+                <referrals_trigger>signup</referrals_trigger>
+            </milestone>
+        </giantpoints>
+    </default>
+
+</config>

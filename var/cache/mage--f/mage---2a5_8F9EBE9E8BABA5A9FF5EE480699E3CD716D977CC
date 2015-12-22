@@ -1,0 +1,35 @@
+
+    <div class="widget widget-static-block ">
+    	    	<div class="grid_6 alpha small hide-lte0">
+<p class="h5">新手入门</p>
+<ul class="none">
+<li><a href="http://www.nymart.com/shopping_guide_zh?___SID=U">购物流程</a></li>
+<li><a href="http://www.nymart.com/pay_zh?___SID=U">支付方式 </a></li>
+<li><a href="http://www.nymart.com/return_zh?___SID=U">退换说明</a></li>
+<li><a href="http://www.nymart.com/shipment_zh?___SID=U">邮寄配送</a></li>
+</ul>
+</div>
+<div class="grid_6 small">
+<p class="h5">客户服务</p>
+<ul class="none">
+<li><a href="http://www.nymart.com/quality_zh?___SID=U">质量保证</a></li>
+<li><a href="http://www.nymart.com/reward_zh?___SID=U">会员积分</a></li>
+<li><a href="http://www.nymart.com/faq_zh?___SID=U">常见问题</a></li>
+</ul>
+</div>
+<div class="grid_6 small">
+<p class="h5">关于我们</p>
+<ul class="none">
+<li><a href="http://www.nymart.com/contact_us_zh?___SID=U">联系我们</a></li>
+<li><a href="http://www.nymart.com/service_center_zh?___SID=U">电话中心</a></li>
+</ul>
+</div>
+<div class="grid_6 omega small">
+<p class="h5">公司地址</p>
+<p>中国城超市</p>
+<p>地址：2-39 54th Ave.
+Long Island City, NY 11101</p>
+<p>电话:：+1 (888)-458-7973</p>
+<p>邮箱： support@newyorkmart.com</p>
+</div>    </div>
+
