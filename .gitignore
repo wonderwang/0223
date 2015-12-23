@@ -1,11 +1,3 @@
-# Images #
+# product dir #
 ######################
-*.jpg
-*.png
-*.jpeg
-
-# SQL #
-######################
-*.sql
-
-
+media/catalog/product/
